@@ -1,3 +1,6 @@
+
+// ------------------------- Digital Clock Logic and Action ----------------------------- 
+
 function clock(){
     let hours = document.getElementById('hours');
     let minutes = document.getElementById('minutes');
@@ -21,10 +24,9 @@ function clock(){
     seconds.innerHTML = s;
     period.innerHTML = ampm;
 };
-
 setInterval(clock,1000);
 
-
+// ----------------------- CSS Manipulation --------------------------- 
 // 1. Accessing the body and applying styles
 document.body.style.minHeight = "80vh";
 document.body.style.background = "#2e2e45";
