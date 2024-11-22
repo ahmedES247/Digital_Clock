@@ -103,3 +103,9 @@ body{
 #seconds{
     color: white;
 }
+
+#date {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-left: 35px;
+}
