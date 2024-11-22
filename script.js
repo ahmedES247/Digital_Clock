@@ -1,10 +1,12 @@
-// ------------------------- Digital Clock Logic and Action ----------------------------- 
+// ----------------------  Digital Clock -------------------------
 function clock(){
     let hours = document.getElementById('hours');
     let minutes = document.getElementById('minutes');
     let seconds = document.getElementById('seconds');
     let period = document.getElementById('period');
+    let dateElement = document.getElementById('date');
 
+    let now = new Date();
     let h = new Date().getHours();
     let m = new Date().getMinutes();
     let s = new Date().getSeconds();
@@ -21,5 +23,12 @@ function clock(){
     minutes.innerHTML = m;
     seconds.innerHTML = s;
     period.innerHTML = ampm;
-};
-setInterval(clock,1000);
+
+    let options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    let fullDate = now.toLocaleDateString('en-GB', options);
+    dateElement.innerHTML = fullDate;
+
+}
+;setInterval(clock,1000);
+
+
